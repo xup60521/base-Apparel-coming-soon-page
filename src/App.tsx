@@ -1,4 +1,7 @@
 import Form from "./Form";
+import Logo from "/images/logo.svg"
+import HeroMobile from "/images/hero-mobile.jpg"
+import HeroDesktop from "/images/hero-desktop.jpg"
 
 export default function App() {
     return (
@@ -6,12 +9,12 @@ export default function App() {
             <div className="bg-cover flex flex-col items-center md:bg-[url(/images/bg-pattern-desktop.svg)] flex-grow">
                 <div className="flex flex-col min-h-full md:w-[min(29rem,100%)]">
                     <img
-                        src="/images/logo.svg"
+                        src={Logo}
                         alt="logo"
                         className="md:w-44 w-24 md:my-12 my-6 md:mx-0 mx-6"
                     />
                     <img
-                        src="/images/hero-mobile.jpg"
+                        src={HeroMobile}
                         alt="mobile hero image"
                         className="md:hidden"
                     />
@@ -34,7 +37,7 @@ export default function App() {
                 </div>
             </div>
             <img
-                src="/images/hero-desktop.jpg"
+                src={HeroDesktop}
                 alt="desktop hero image"
                 className="md:block hidden h-screen aspect-[610/800]"
             />

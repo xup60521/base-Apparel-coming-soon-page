@@ -2,6 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
+import ErrorImg from "/images/icon-error.svg";
+import Arrow from "/images/icon-arrow.svg"
 
 const formSchema = z.object({
     email: z.string().email("Please provide a valid email"),
@@ -23,7 +25,10 @@ export default function Form() {
         reset();
     };
     return (
-        <form className="relative w-full md:scale-100" onSubmit={handleSubmit(onSubmit)}>
+        <form
+            className="relative w-full md:scale-100"
+            onSubmit={handleSubmit(onSubmit)}
+        >
             <div className="relative flex items-center">
                 <input
                     data-testid="email-input"
@@ -36,7 +41,7 @@ export default function Form() {
                 />
                 {errors.email && (
                     <img
-                        src="/images/icon-error.svg"
+                        src={ErrorImg}
                         alt="error icon"
                         className="absolute md:right-28 right-20"
                     />
@@ -55,7 +60,7 @@ export default function Form() {
                 >
                     <span className="sr-only">submit</span>
                     <img
-                        src="/images/icon-arrow.svg"
+                        src={Arrow}
                         alt="right arror"
                         className=""
                     />
