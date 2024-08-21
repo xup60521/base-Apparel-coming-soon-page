@@ -56,7 +56,7 @@ export default function Form() {
                 <button
                     data-testid="submit-btn"
                     type="submit"
-                    className="h-full w-full flex justify-center items-center  transition hover:bg-opacity-50 bg-transparent hover:bg-white"
+                    className="h-full w-full flex justify-center items-center rounded-full transition hover:bg-opacity-50 bg-transparent hover:bg-white"
                 >
                     <span className="sr-only">submit</span>
                     <img
